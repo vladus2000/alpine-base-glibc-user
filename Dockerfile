@@ -6,7 +6,7 @@ ENV STARTUP_CMD="sleep 1h"
 COPY shiz/ /
 
 RUN \
-	adduser -s /bin/bash -D user && \
+	adduser -s /bin/ash -D user && \
 	apk add --no-cache shadow su-exec && \
 	ln -s /.bashrc ~user/.bash_profile && \
 	chmod +x /*.sh && \
